@@ -1,6 +1,6 @@
-# 🌌 Spaceship
+# 🌌 AstrOb
 
-**Astro Spaceship** is a powerful, minimal, and flexible theme designed for turning your Obsidian vault into a beautiful, static website using Astro and TailwindCSS. Whether you're sharing your digital garden, notes, or a Zettelkasten, this theme helps bring your knowledge to the web with elegance and ease.
+**AstrOb** 是基于Astro的现代化博客系统，支持主题切换和多平台部署。这是一个强大的、极简的、灵活的主题，专为将您的Obsidian知识库转换为美观的静态网站而设计。
 
 ---
 
@@ -107,9 +107,9 @@ degit aitorllj93/astro-theme-spaceship
 
 ### 专项指南
 
-- **[图床配置指南-七牛云](./图床配置指南-七牛云.md)** - PicGo + 七牛云图床完整配置
 - **[Supabase 集成指南](./Supabase集成指南.md)** - 评论、统计、点赞等动态功能
-- **[PKMer 迁移方案](./PKMer迁移方案.md)** - UI 定制和优化
+- **[Supabase 快速开始](./Supabase快速开始.md)** - 快速部署指南
+- **[Supabase 集成MVP方案](./Supabase集成MVP方案.md)** - 最小可行产品方案
 
 ### 快速开始
 
