@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages (no external actions)
 
 on:
   # Trigger the workflow every time you push to the `main` branch
@@ -8,40 +8,66 @@ on:
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
-# Allow this job to clone the repo and create a page deployment
+# Allow this workflow to push to the repository (gh-pages branch)
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v3
-      - name: Install, build, and upload your site
-        uses: withastro/action@v1
-        with:
-          # path: . # The root location of your Astro project inside the repository. (optional)
-          node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
-          # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+      - name: Install Node.js 20 (via NodeSource)
+        run: |
+          curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+          node -v
+          npm -v
+
+      - name: Clone repository
+        run: |
+          git clone --depth=1 https://github.com/${{ github.repository }} repo
+
+      - name: Install dependencies
+        working-directory: repo
+        run: npm ci
+
+      - name: Build with Astro
+        working-directory: repo
         env:
           # 设置 GitHub Pages 环境变量
           SPACESHIP_SITE: https://xujinhuan675-cloud.github.io
           SPACESHIP_BASE: /AstrOb/
           SPACESHIP_AUTHOR: My Vault
+        run: npm run build:github
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+      - name: Publish to gh-pages branch
+        working-directory: repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_SHA: ${{ github.sha }}
+        run: |
+          PAGES_DIR="dist"
+          if [ ! -d "$PAGES_DIR" ]; then
+            echo "Build output directory '$PAGES_DIR' not found" >&2
+            exit 1
+          fi
+
+          DEPLOY_DIR="../deploy"
+          rm -rf "$DEPLOY_DIR"
+          mkdir -p "$DEPLOY_DIR"
+          cp -R "$PAGES_DIR"/* "$DEPLOY_DIR"/
+
+          cd "$DEPLOY_DIR"
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Deploy to GitHub Pages: $GITHUB_SHA"
+          git branch -M gh-pages
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push -f origin gh-pages
+
+      - name: Final note
+        run: |
+          echo "Pushed 'dist' to 'gh-pages' branch. Ensure Settings > Pages uses 'gh-pages / root'."
