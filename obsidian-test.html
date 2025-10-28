@@ -1,0 +1,559 @@
+<!DOCTYPE html><html class="html" lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/AstrOb/favicon.svg"><title>Obsidian 语法完整测试 | 首页</title><meta name="description" content="测试所有 Obsidian 语法功能，包括 Wikilink、标签、图片、Markdown 等"><meta name="keywords" content="Obsidian, 测试, Wiki, Markdown"><meta name="language" content="en"><link rel="canonical" href="https://xujinhuan675-cloud.github.io/AstrOb/obsidian-test.html"><meta property="og:title" content="Obsidian 语法完整测试"><meta property="og:description" content="测试所有 Obsidian 语法功能，包括 Wikilink、标签、图片、Markdown 等"><meta property="og:site_name" content="首页"><meta name="twitter:title" content="Obsidian 语法完整测试"><meta name="twitter:description" content="测试所有 Obsidian 语法功能，包括 Wikilink、标签、图片、Markdown 等">   <script type="module" src="/AstrOb/_astro/_...slug_.astro_astro_type_script_index_0_lang.CLLwONVh.js"></script>  <script>
+      // 在页面加载前立即执行，防止主题和颜色模式闪烁
+      (function() {
+        // 初始化颜色模式（亮色/暗色）
+        const colorMode = localStorage.getItem('colorMode') || 
+          (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        
+        if (colorMode === 'dark') {
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.remove('light');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+        }
+        
+        // 初始化主题
+        const theme = localStorage.getItem('selectedTheme') || 'default';
+        document.documentElement.setAttribute('data-active-theme', theme);
+      })();
+    </script>  <style>.beoe{overflow:hidden;touch-action:pan-x pan-y;-webkit-user-select:none;user-select:none;cursor:grab}.beoe svg,.beoe img,.beoe iframe,.beoe embed{margin:auto;display:block;max-width:100%;height:auto}.beoe img{pointer-events:none}.beoe iframe{width:100%}.beoe{position:relative}.beoe .buttons{position:absolute;right:1rem;bottom:1rem;opacity:0;transition-property:opacity;transition-duration:.3s}.beoe:hover .buttons{opacity:1}@media (hover: none){.beoe .buttons{display:none}}.beoe .touchscreen-warning{position:absolute;inset:0rem;pointer-events:none;display:none;opacity:0;transition-property:opacity;transition-duration:.3s;container-type:inline-size}.beoe .touchscreen-warning p{font-size:min(10cqw,10cqh)}.beoe .touchscreen-warning.active{opacity:1}@media (hover: none){.beoe .touchscreen-warning{display:flex;align-items:center;justify-content:center;background-color:#00000080;color:#fff;font-size:3rem;text-align:center;padding:1rem}}
+.theme-toggle[data-astro-cid-x3pjskd3]{position:fixed;top:1rem;right:1rem;z-index:1000;width:2.5rem;height:2.5rem;border-radius:.5rem;border:1px solid rgba(255,255,255,.1);background:#0000004d;backdrop-filter:blur(10px);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s ease}.theme-toggle[data-astro-cid-x3pjskd3]:hover{background:#00000080;transform:scale(1.05)}.theme-toggle[data-astro-cid-x3pjskd3] svg[data-astro-cid-x3pjskd3]{color:#fff;transition:opacity .3s ease,transform .3s ease}.sun-icon[data-astro-cid-x3pjskd3]{position:absolute;opacity:0;transform:rotate(90deg)}.moon-icon[data-astro-cid-x3pjskd3]{position:absolute;opacity:1;transform:rotate(0)}html:not(.dark) .theme-toggle[data-astro-cid-x3pjskd3]{background:#fffc;border:1px solid rgba(0,0,0,.1)}html:not(.dark) .theme-toggle[data-astro-cid-x3pjskd3] svg[data-astro-cid-x3pjskd3]{color:#333}html:not(.dark) .sun-icon[data-astro-cid-x3pjskd3]{opacity:1;transform:rotate(0)}html:not(.dark) .moon-icon[data-astro-cid-x3pjskd3]{opacity:0;transform:rotate(-90deg)}@media (max-width: 768px){.theme-toggle[data-astro-cid-x3pjskd3]{top:.75rem;right:.75rem;width:2.25rem;height:2.25rem}}.theme-selector[data-astro-cid-lgn464si]{position:fixed;bottom:20px;right:20px;z-index:9999}.theme-selector-btn[data-astro-cid-lgn464si]{display:flex;align-items:center;gap:8px;padding:10px 16px;background:var(--theme-bg-elevated, #152a3d);color:var(--theme-text-primary, #e2e8f0);border:1px solid var(--theme-border-light, rgba(255, 255, 255, .1));border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s ease;box-shadow:0 2px 8px #0000001a}.theme-selector-btn[data-astro-cid-lgn464si]:hover{background:var(--theme-bg-main, #071827);border-color:var(--theme-primary, #06b6d4);transform:translateY(-1px);box-shadow:0 4px 12px #00000026}.theme-icon[data-astro-cid-lgn464si]{font-size:18px;line-height:1}.theme-label[data-astro-cid-lgn464si]{min-width:80px;text-align:left}.theme-arrow[data-astro-cid-lgn464si]{font-size:10px;transition:transform .2s ease}.theme-selector-btn[data-astro-cid-lgn464si].open .theme-arrow[data-astro-cid-lgn464si]{transform:rotate(180deg)}.theme-dropdown[data-astro-cid-lgn464si]{position:absolute;bottom:calc(100% + 8px);right:0;min-width:180px;background:var(--theme-bg-elevated, #152a3d);border:1px solid var(--theme-border-light, rgba(255, 255, 255, .1));border-radius:8px;box-shadow:0 8px 24px #0003;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all .2s ease;overflow:hidden}.theme-dropdown[data-astro-cid-lgn464si].show{opacity:1;visibility:visible;transform:translateY(0)}.theme-option[data-astro-cid-lgn464si]{display:flex;align-items:center;gap:12px;width:100%;padding:12px 16px;background:transparent;color:var(--theme-text-primary, #e2e8f0);border:none;font-size:14px;text-align:left;cursor:pointer;transition:all .2s ease}.theme-option[data-astro-cid-lgn464si]:hover{background:var(--theme-bg-main, #071827);color:var(--theme-primary, #06b6d4)}.theme-option[data-astro-cid-lgn464si].active{background:var(--theme-primary, #06b6d4);color:#fff}.theme-option[data-astro-cid-lgn464si].active .option-icon[data-astro-cid-lgn464si]{transform:scale(1.2)}.option-icon[data-astro-cid-lgn464si]{font-size:18px;line-height:1;transition:transform .2s ease}.option-text[data-astro-cid-lgn464si]{flex:1}@media (max-width: 768px){.theme-selector[data-astro-cid-lgn464si]{bottom:80px;right:15px}.theme-selector-btn[data-astro-cid-lgn464si]{padding:8px 12px;font-size:13px}.theme-label[data-astro-cid-lgn464si]{min-width:60px}.theme-dropdown[data-astro-cid-lgn464si]{min-width:160px}.theme-option[data-astro-cid-lgn464si]{padding:10px 14px;font-size:13px}}@media (max-width: 480px){.theme-label[data-astro-cid-lgn464si],.theme-arrow[data-astro-cid-lgn464si]{display:none}.theme-selector-btn[data-astro-cid-lgn464si]{padding:10px}}
+</style>
+<link rel="stylesheet" href="/AstrOb/_astro/_slug_.D9CpNCrs.css"></head> <body class="body"> <div class="texture"></div> <main class="main">   <div class="sidebar sidebar-desktop"> <input type="checkbox" id="left-sidebar-desktop" class="sidebar-checkbox peer" checked> <label for="left-sidebar-desktop" class="sidebar-arrow sidebar-left-arrow"> <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="-6 0 24 24"><defs><path id="weuiArrowOutlined0" fill="currentColor" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z"></path></defs><use fill-rule="evenodd" href="#weuiArrowOutlined0" transform="rotate(-180 5.02 9.505)"></use></svg> </label> <div class="sidebar-content sidebar-content-left">  <header id="header-desktop" class="header"> <a href="/AstrOb/" class="header-link"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="currentColor" d="M96 256h32v256H0V352h32v-32h32v-32h32zm416 96v160H384V256h32v32h32v32h32v32zM320 64h32v384h-32v-32H192v32h-32V64h32V32h32V0h64v32h32zm-32 64h-64v64h64z"></path></svg> 首页 </a> </header> <nav class="search-nav"> <div id="search" class="pagefind-ui-sidebar-search pagefind-init" data-pagefind-ui data-bundle-path="/AstrOb/pagefind/" data-ui-options="{&#34;showImages&#34;:false,&#34;pageSize&#34;:10}"></div> <script type="module" src="/AstrOb/_astro/Search.astro_astro_type_script_index_0_lang.DGrGr10b.js"></script> </nav> <nav class="navigation-tree"> <ul class="navigation-tree-list"> <li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/features" title="Features"> Features </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/getting-started" title="Getting Started"> Getting Started </a>  </li><li class="tree-leaf tree-leaf-folder tree-leaf-active"> <a href="/AstrOb/obsidian-test" title="Obsidian 语法完整测试"> Obsidian 语法完整测试 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/公共管理学" title="test-notionnext"> test-notionnext </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/welcome-copy" title="Welcome"> Welcome </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/中央银行学" title="中央银行学-复习资料"> 中央银行学-复习资料 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/产业经济学重点知识整理" title="产业经济学重点知识整理"> 产业经济学重点知识整理 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/保险学知识重点" title="保险学知识重点"> 保险学知识重点 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/公共伦理学概述" title="公共伦理学概述"> 公共伦理学概述 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/公共关系重点整理" title="公共关系重点整理"> 公共关系重点整理 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/公共经济学复习资料" title="公共经济学复习资料"> 公共经济学复习资料 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/公司金融" title="公司金融"> 公司金融 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/初级会计学-复习资料" title="初级会计学-复习资料"> 初级会计学-复习资料 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/区域经济学" title="区域经济学"> 区域经济学 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/发展经济学复习要点" title="发展经济学复习要点"> 发展经济学复习要点 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/品牌管理" title="品牌管理"> 品牌管理 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/城市经济学复习资料" title="城市经济学资料"> 城市经济学资料 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/审计学-复习重点汇总" title="审计学-复习重点汇总"> 审计学-复习重点汇总 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/工程经济学简答题" title="工程经济学简答题"> 工程经济学简答题 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/未命名" title="未命名"> 未命名 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/电子商务概论" title="电子商务概论"> 电子商务概论 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/社会主义市场经济理论" title="社会主义市场经济理论"> 社会主义市场经济理论 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/管理会计学-重点" title="管理会计学-重点"> 管理会计学-重点 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/管理会计学简答" title="管理会计学简答"> 管理会计学简答 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/管理信息系统-期末复习重点" title="管理信息系统-期末复习重点"> 管理信息系统-期末复习重点 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/管理学-考试重点整理" title="管理学-考试重点整理"> 管理学-考试重点整理 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/管理学原理-基本概念" title="管理学原理-基本概念"> 管理学原理-基本概念 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/管理学原理-复习资料" title="管理学原理-复习资料"> 管理学原理-复习资料 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/西方经济学各章复习重点" title="西方经济学各章复习重点"> 西方经济学各章复习重点 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/西方经济学框架及知识点归纳" title="西方经济学框架及知识点归纳"> 西方经济学框架及知识点归纳 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/财务管理-复习重点" title="财务管理复习重点整理"> 财务管理复习重点整理 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/财政学知识点" title="财政学知识点"> 财政学知识点 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/资产评估-上" title="资产评估（前三章）上"> 资产评估（前三章）上 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/资产评估后五章下" title="资产评估（后五章)下"> 资产评估（后五章)下 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/资产评估第四章中" title="资产评估（第四章)中"> 资产评估（第四章)中 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/逻辑学题" title="逻辑学题"> 逻辑学题 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/采购管理" title="采购管理"> 采购管理 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/金融-基础知识重点" title="金融-基础知识重点"> 金融-基础知识重点 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/马克思主义政治经济学" title="马克思主义政治经济学"> 马克思主义政治经济学 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/高教版管理学重点知识整理-1-13-章" title="高教版《管理学》重点知识整理 1-13 章"> 高教版《管理学》重点知识整理 1-13 章 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/advanced-features" title="高级功能指南"> 高级功能指南 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/高级财务会计复习资料" title="高级财务会计复习资料"> 高级财务会计复习资料 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/高级财务管理复习资料" title="高级财务管理复习资料"> 高级财务管理复习资料 </a>  </li> </ul> </nav>  </div> </div> <div class="sidebar sidebar-touch"> <input type="checkbox" id="left-sidebar-touch" class="sidebar-checkbox peer"> <label for="left-sidebar-touch" class="sidebar-arrow sidebar-left-arrow"> <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="-6 0 24 24"><defs><path id="weuiArrowOutlined0" fill="currentColor" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z"></path></defs><use fill-rule="evenodd" href="#weuiArrowOutlined0" transform="rotate(-180 5.02 9.505)"></use></svg> </label> <div class="sidebar-content sidebar-content-left">  <header id="header-touch" class="header"> <a href="/AstrOb/" class="header-link"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="currentColor" d="M96 256h32v256H0V352h32v-32h32v-32h32zm416 96v160H384V256h32v32h32v32h32v32zM320 64h32v384h-32v-32H192v32h-32V64h32V32h32V0h64v32h32zm-32 64h-64v64h64z"></path></svg> 首页 </a> </header> <nav class="search-nav"> <div id="search" class="pagefind-ui-sidebar-search pagefind-init" data-pagefind-ui data-bundle-path="/AstrOb/pagefind/" data-ui-options="{&#34;showImages&#34;:false,&#34;pageSize&#34;:10}"></div>  </nav> <nav class="navigation-tree"> <ul class="navigation-tree-list"> <li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/features" title="Features"> Features </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/getting-started" title="Getting Started"> Getting Started </a>  </li><li class="tree-leaf tree-leaf-folder tree-leaf-active"> <a href="/AstrOb/obsidian-test" title="Obsidian 语法完整测试"> Obsidian 语法完整测试 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/公共管理学" title="test-notionnext"> test-notionnext </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/welcome-copy" title="Welcome"> Welcome </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/中央银行学" title="中央银行学-复习资料"> 中央银行学-复习资料 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/产业经济学重点知识整理" title="产业经济学重点知识整理"> 产业经济学重点知识整理 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/保险学知识重点" title="保险学知识重点"> 保险学知识重点 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/公共伦理学概述" title="公共伦理学概述"> 公共伦理学概述 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/公共关系重点整理" title="公共关系重点整理"> 公共关系重点整理 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/公共经济学复习资料" title="公共经济学复习资料"> 公共经济学复习资料 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/公司金融" title="公司金融"> 公司金融 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/初级会计学-复习资料" title="初级会计学-复习资料"> 初级会计学-复习资料 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/区域经济学" title="区域经济学"> 区域经济学 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/发展经济学复习要点" title="发展经济学复习要点"> 发展经济学复习要点 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/品牌管理" title="品牌管理"> 品牌管理 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/城市经济学复习资料" title="城市经济学资料"> 城市经济学资料 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/审计学-复习重点汇总" title="审计学-复习重点汇总"> 审计学-复习重点汇总 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/工程经济学简答题" title="工程经济学简答题"> 工程经济学简答题 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/未命名" title="未命名"> 未命名 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/电子商务概论" title="电子商务概论"> 电子商务概论 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/社会主义市场经济理论" title="社会主义市场经济理论"> 社会主义市场经济理论 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/管理会计学-重点" title="管理会计学-重点"> 管理会计学-重点 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/管理会计学简答" title="管理会计学简答"> 管理会计学简答 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/管理信息系统-期末复习重点" title="管理信息系统-期末复习重点"> 管理信息系统-期末复习重点 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/管理学-考试重点整理" title="管理学-考试重点整理"> 管理学-考试重点整理 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/管理学原理-基本概念" title="管理学原理-基本概念"> 管理学原理-基本概念 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/管理学原理-复习资料" title="管理学原理-复习资料"> 管理学原理-复习资料 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/西方经济学各章复习重点" title="西方经济学各章复习重点"> 西方经济学各章复习重点 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/西方经济学框架及知识点归纳" title="西方经济学框架及知识点归纳"> 西方经济学框架及知识点归纳 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/财务管理-复习重点" title="财务管理复习重点整理"> 财务管理复习重点整理 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/财政学知识点" title="财政学知识点"> 财政学知识点 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/资产评估-上" title="资产评估（前三章）上"> 资产评估（前三章）上 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/资产评估后五章下" title="资产评估（后五章)下"> 资产评估（后五章)下 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/资产评估第四章中" title="资产评估（第四章)中"> 资产评估（第四章)中 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/逻辑学题" title="逻辑学题"> 逻辑学题 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/采购管理" title="采购管理"> 采购管理 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/金融-基础知识重点" title="金融-基础知识重点"> 金融-基础知识重点 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/马克思主义政治经济学" title="马克思主义政治经济学"> 马克思主义政治经济学 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/高教版管理学重点知识整理-1-13-章" title="高教版《管理学》重点知识整理 1-13 章"> 高教版《管理学》重点知识整理 1-13 章 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/advanced-features" title="高级功能指南"> 高级功能指南 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/高级财务会计复习资料" title="高级财务会计复习资料"> 高级财务会计复习资料 </a>  </li><li class="tree-leaf tree-leaf-folder"> <a href="/AstrOb/高级财务管理复习资料" title="高级财务管理复习资料"> 高级财务管理复习资料 </a>  </li> </ul> </nav>  </div> </div>  <article class="article" data-pagefind-body> <section class="article-content"> <h1 data-pagefind-weight="10" class="article-title">Obsidian 语法完整测试</h1>  <div class="article-description-section"> <p data-pagefind-weight="0.1" class="article-description">测试所有 Obsidian 语法功能，包括 Wikilink、标签、图片、Markdown 等</p> <div class="article-meta">   <div data-pagefind-weight="0" class="article-tags"><a class="article-tag" href="/AstrOb/tags/obsidian">Obsidian</a><a class="article-tag" href="/AstrOb/tags/测试">测试</a><a class="article-tag" href="/AstrOb/tags/wiki">Wiki</a><a class="article-tag" href="/AstrOb/tags/markdown">Markdown</a></div> </div> </div>  <div data-pagefind-weight="0.1" class="article-body"> <p>欢迎来到 Obsidian 语法测试笔记！本笔记包含所有 Obsidian 特有语法的完整示例。</p>
+<hr>
+<h2 id="-wikilink-双向链接测试">🔗 Wikilink 双向链接测试</h2>
+<h3 id="基础链接">基础链接</h3>
+<p>以下是指向其他笔记的基础链接：</p>
+<ul>
+<li>返回首页：<span class="article-wikilink">Welcome</span></li>
+<li>快速开始：<a class="article-wikilink" href=/AstrOb/getting-started>getting-started</a></li>
+<li>功能特性：<a class="article-wikilink" href=/AstrOb/features>features</a></li>
+</ul>
+<h3 id="带显示文本的链接">带显示文本的链接</h3>
+<p>使用 <code>|</code> 分隔符自定义显示文本：</p>
+<ul>
+<li>查看 <span class="article-wikilink">🏠 欢迎页面</span> 了解项目</li>
+<li>阅读 <a class="article-wikilink" href=/AstrOb/getting-started>📚 入门指南</a> 开始使用</li>
+<li>浏览 <a class="article-wikilink" href=/AstrOb/features>⚡ 功能列表</a> 查看所有特性</li>
+</ul>
+<h3 id="链接测试要点">链接测试要点</h3>
+<p>✅ 链接应该显示为蓝色可点击文本<br>
+✅ 鼠标悬停显示目标 URL<br>
+✅ 点击后跳转到对应笔记<br>
+✅ 自定义文本正确显示</p>
+<hr>
+<h2 id="️-标签系统测试">🏷️ 标签系统测试</h2>
+<h3 id="frontmatter-标签">Frontmatter 标签</h3>
+<p>在文档顶部的 frontmatter 中定义：</p>
+<div class="expressive-code"><link rel="stylesheet" href="/AstrOb/_astro/ec.lwq65.css"><script type="module" src="/AstrOb/_astro/ec.p1z7b.js"></script><figure class="frame"><figcaption class="header"></figcaption><pre data-language="yaml"><code><div class="ec-line"><div class="code"><span style="--0:#B33540;--1:#F2858C">tags</span><span style="--0:#2965A8;--1:#80BBFF">:</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#2965A8;--1:#80BBFF">[</span><span style="--0:#2965A8;--1:#80BBFF">"</span><span style="--0:#25723F;--1:#82D99F">Obsidian</span><span style="--0:#2965A8;--1:#80BBFF">"</span><span style="--0:#2965A8;--1:#80BBFF">,</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#2965A8;--1:#80BBFF">"</span><span style="--0:#25723F;--1:#82D99F">测试</span><span style="--0:#2965A8;--1:#80BBFF">"</span><span style="--0:#2965A8;--1:#80BBFF">,</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#2965A8;--1:#80BBFF">"</span><span style="--0:#25723F;--1:#82D99F">Wiki</span><span style="--0:#2965A8;--1:#80BBFF">"</span><span style="--0:#2965A8;--1:#80BBFF">]</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="tags: [&#x22;Obsidian&#x22;, &#x22;测试&#x22;, &#x22;Wiki&#x22;]"><div></div></button></div></figure></div>
+<h3 id="正文标签">正文标签</h3>
+<p>在正文中直接使用 <code>#</code> 创建标签：</p>
+<ul>
+<li>单个标签：<a class="article-tag" href=/AstrOb/tags/obsidian><a class="article-tag" href=/AstrOb/tags/obsidian><a class="article-tag" href=/AstrOb/tags/obsidian>#Obsidian</a></a></a> <a class="article-tag" href=/AstrOb/tags/markdown>#Markdown</a> #知识库</li>
+<li>中文标签：#测试 #入门 #文档</li>
+<li>嵌套标签：#项目/前端 #学习/编程 #工具/Astro</li>
+<li>组合使用：<a class="article-tag" href=/AstrOb/tags/web><a class="article-tag" href=/AstrOb/tags/web>#Web</a></a>开发 <a class="article-tag" href=/AstrOb/tags/typescript>#TypeScript</a> <a class="article-tag" href=/AstrOb/tags/javascript>#JavaScript</a></li>
+</ul>
+<h3 id="标签测试要点">标签测试要点</h3>
+<p>✅ 标签应该显示为紫色可点击文本<br>
+✅ 点击后跳转到标签页 <code>/tags/{标签名}</code><br>
+✅ 标签页显示包含该标签的所有笔记<br>
+✅ 支持中文和嵌套标签</p>
+<hr>
+<h2 id="-markdown-基础语法测试">📝 Markdown 基础语法测试</h2>
+<h3 id="文本格式">文本格式</h3>
+<ul>
+<li><strong>粗体文本</strong> - 使用 <code>**文本**</code></li>
+<li><em>斜体文本</em> - 使用 <code>*文本*</code></li>
+<li><em><strong>粗斜体</strong></em> - 使用 <code>***文本***</code></li>
+<li><del>删除线</del> - 使用 <code>~~文本~~</code></li>
+<li><code>行内代码</code> - 使用 <code>`代码`</code></li>
+</ul>
+<h3 id="标题层级">标题层级</h3>
+<p>Markdown 支持 6 级标题，本笔记演示了 H1-H3。</p>
+<h3 id="有序列表">有序列表</h3>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项
+<ol>
+<li>嵌套项 3.1</li>
+<li>嵌套项 3.2</li>
+</ol>
+</li>
+<li>第四项</li>
+</ol>
+<h3 id="无序列表">无序列表</h3>
+<ul>
+<li>项目 A</li>
+<li>项目 B
+<ul>
+<li>子项目 B.1</li>
+<li>子项目 B.2
+<ul>
+<li>深层嵌套 B.2.1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>项目 C</li>
+</ul>
+<h3 id="混合列表">混合列表</h3>
+<ol>
+<li>有序项
+<ul>
+<li>无序子项</li>
+<li>另一个子项</li>
+</ul>
+</li>
+<li>继续有序
+<ol>
+<li>嵌套有序</li>
+<li>再一项</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h2 id="-代码块测试">💻 代码块测试</h2>
+<h3 id="javascript">JavaScript</h3>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre data-language="javascript"><code><div class="ec-line"><div class="code"><span style="--0:#606369;--1:#8E9299">// JavaScript 示例</span></div></div><div class="ec-line"><div class="code"><span style="--0:#7940CC;--1:#B38CFF">function</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#9B4E2F;--1:#F29D79">fibonacci</span><span style="--0:#2965A8;--1:#80BBFF">(</span><span style="--0:#70631F;--1:#DED47E">n</span><span style="--0:#2965A8;--1:#80BBFF">)</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#2965A8;--1:#80BBFF">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#2965A8;--1:#80BBFF">if</span><span style="--0:#2A2E3A;--1:#DADDE5"> (</span><span style="--0:#70631F;--1:#DED47E">n</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#7940CC;--1:#B38CFF">&#x3C;=</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#AA3386;--1:#F48CCA">1</span><span style="--0:#2A2E3A;--1:#DADDE5">) </span><span style="--0:#2965A8;--1:#80BBFF">return</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#70631F;--1:#DED47E">n</span><span style="--0:#2965A8;--1:#80BBFF">;</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#2965A8;--1:#80BBFF">return</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#9B4E2F;--1:#F29D79">fibonacci</span><span style="--0:#2A2E3A;--1:#DADDE5">(</span><span style="--0:#70631F;--1:#DED47E">n</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#7940CC;--1:#B38CFF">-</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#AA3386;--1:#F48CCA">1</span><span style="--0:#2A2E3A;--1:#DADDE5">) </span><span style="--0:#7940CC;--1:#B38CFF">+</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#9B4E2F;--1:#F29D79">fibonacci</span><span style="--0:#2A2E3A;--1:#DADDE5">(</span><span style="--0:#70631F;--1:#DED47E">n</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#7940CC;--1:#B38CFF">-</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#AA3386;--1:#F48CCA">2</span><span style="--0:#2A2E3A;--1:#DADDE5">)</span><span style="--0:#2965A8;--1:#80BBFF">;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#2965A8;--1:#80BBFF">}</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#70631F;--1:#DED47E">console</span><span style="--0:#2965A8;--1:#80BBFF">.</span><span style="--0:#9B4E2F;--1:#F29D79">log</span><span style="--0:#2A2E3A;--1:#DADDE5">(</span><span style="--0:#2965A8;--1:#80BBFF">'</span><span style="--0:#25723F;--1:#82D99F">Fibonacci(10):</span><span style="--0:#2965A8;--1:#80BBFF">'</span><span style="--0:#2965A8;--1:#80BBFF">,</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#9B4E2F;--1:#F29D79">fibonacci</span><span style="--0:#2A2E3A;--1:#DADDE5">(</span><span style="--0:#AA3386;--1:#F48CCA">10</span><span style="--0:#2A2E3A;--1:#DADDE5">))</span><span style="--0:#2965A8;--1:#80BBFF">;</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="// JavaScript 示例function fibonacci(n) {  if (n <= 1) return n;  return fibonacci(n - 1) + fibonacci(n - 2);}console.log(&#x27;Fibonacci(10):&#x27;, fibonacci(10));"><div></div></button></div></figure></div>
+<h3 id="typescript">TypeScript</h3>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre data-language="typescript"><code><div class="ec-line"><div class="code"><span style="--0:#606369;--1:#8E9299">// TypeScript 示例</span></div></div><div class="ec-line"><div class="code"><span style="--0:#7940CC;--1:#B38CFF">interface</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#7C558B;--1:#F0D8FF">User</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#2965A8;--1:#80BBFF">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#70631F;--1:#DED47E">name</span><span style="--0:#7940CC;--1:#B38CFF">:</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#2965A8;--1:#80BBFF">string;</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#70631F;--1:#DED47E">age</span><span style="--0:#7940CC;--1:#B38CFF">:</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#2965A8;--1:#80BBFF">number;</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#70631F;--1:#DED47E">email</span><span style="--0:#7940CC;--1:#B38CFF">?:</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#2965A8;--1:#80BBFF">string;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#2965A8;--1:#80BBFF">}</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#7940CC;--1:#B38CFF">const</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#70631F;--1:#DED47E">user</span><span style="--0:#7940CC;--1:#B38CFF">:</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#7C558B;--1:#F0D8FF">User</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#7940CC;--1:#B38CFF">=</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#2965A8;--1:#80BBFF">{</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#2A2E3A;--1:#DADDE5">  </span></span><span style="--0:#2A2E3A;--1:#DADDE5">name</span><span style="--0:#2965A8;--1:#80BBFF">:</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#2965A8;--1:#80BBFF">'</span><span style="--0:#25723F;--1:#82D99F">John Doe</span><span style="--0:#2965A8;--1:#80BBFF">'</span><span style="--0:#2965A8;--1:#80BBFF">,</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#2A2E3A;--1:#DADDE5">  </span></span><span style="--0:#2A2E3A;--1:#DADDE5">age</span><span style="--0:#2965A8;--1:#80BBFF">:</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#AA3386;--1:#F48CCA">30</span></div></div><div class="ec-line"><div class="code"><span style="--0:#2965A8;--1:#80BBFF">};</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="// TypeScript 示例interface User {  name: string;  age: number;  email?: string;}const user: User = {  name: &#x27;John Doe&#x27;,  age: 30};"><div></div></button></div></figure></div>
+<h3 id="python">Python</h3>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre data-language="python"><code><div class="ec-line"><div class="code"><span style="--0:#606369;--1:#8E9299"># Python 示例</span></div></div><div class="ec-line"><div class="code"><span style="--0:#7940CC;--1:#B38CFF">def</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#9B4E2F;--1:#F29D79">quicksort</span><span style="--0:#2965A8;--1:#80BBFF">(</span><span style="--0:#70631F;--1:#DED47E">arr</span><span style="--0:#2965A8;--1:#80BBFF">):</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#2965A8;--1:#80BBFF">if</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#9B4E2F;--1:#F29D79">len</span><span style="--0:#2965A8;--1:#80BBFF">(</span><span style="--0:#9B4E2F;--1:#F29D79">arr</span><span style="--0:#2965A8;--1:#80BBFF">)</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#7940CC;--1:#B38CFF">&#x3C;=</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#AA3386;--1:#F48CCA">1</span><span style="--0:#2965A8;--1:#80BBFF">:</span></div></div><div class="ec-line"><div class="code"><span class="indent">        </span><span style="--0:#2965A8;--1:#80BBFF">return</span><span style="--0:#2A2E3A;--1:#DADDE5"> arr</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#2A2E3A;--1:#DADDE5">    </span></span><span style="--0:#2A2E3A;--1:#DADDE5">pivot </span><span style="--0:#7940CC;--1:#B38CFF">=</span><span style="--0:#2A2E3A;--1:#DADDE5"> arr</span><span style="--0:#2965A8;--1:#80BBFF">[</span><span style="--0:#9B4E2F;--1:#F29D79">len</span><span style="--0:#2965A8;--1:#80BBFF">(</span><span style="--0:#9B4E2F;--1:#F29D79">arr</span><span style="--0:#2965A8;--1:#80BBFF">)</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#7940CC;--1:#B38CFF">//</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#AA3386;--1:#F48CCA">2</span><span style="--0:#2965A8;--1:#80BBFF">]</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#2A2E3A;--1:#DADDE5">    </span></span><span style="--0:#2A2E3A;--1:#DADDE5">left </span><span style="--0:#7940CC;--1:#B38CFF">=</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#2965A8;--1:#80BBFF">[</span><span style="--0:#2A2E3A;--1:#DADDE5">x </span><span style="--0:#2965A8;--1:#80BBFF">for</span><span style="--0:#2A2E3A;--1:#DADDE5"> x </span><span style="--0:#2965A8;--1:#80BBFF">in</span><span style="--0:#2A2E3A;--1:#DADDE5"> arr </span><span style="--0:#2965A8;--1:#80BBFF">if</span><span style="--0:#2A2E3A;--1:#DADDE5"> x </span><span style="--0:#7940CC;--1:#B38CFF">&#x3C;</span><span style="--0:#2A2E3A;--1:#DADDE5"> pivot</span><span style="--0:#2965A8;--1:#80BBFF">]</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#2A2E3A;--1:#DADDE5">    </span></span><span style="--0:#2A2E3A;--1:#DADDE5">middle </span><span style="--0:#7940CC;--1:#B38CFF">=</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#2965A8;--1:#80BBFF">[</span><span style="--0:#2A2E3A;--1:#DADDE5">x </span><span style="--0:#2965A8;--1:#80BBFF">for</span><span style="--0:#2A2E3A;--1:#DADDE5"> x </span><span style="--0:#2965A8;--1:#80BBFF">in</span><span style="--0:#2A2E3A;--1:#DADDE5"> arr </span><span style="--0:#2965A8;--1:#80BBFF">if</span><span style="--0:#2A2E3A;--1:#DADDE5"> x </span><span style="--0:#7940CC;--1:#B38CFF">==</span><span style="--0:#2A2E3A;--1:#DADDE5"> pivot</span><span style="--0:#2965A8;--1:#80BBFF">]</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#2A2E3A;--1:#DADDE5">    </span></span><span style="--0:#2A2E3A;--1:#DADDE5">right </span><span style="--0:#7940CC;--1:#B38CFF">=</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#2965A8;--1:#80BBFF">[</span><span style="--0:#2A2E3A;--1:#DADDE5">x </span><span style="--0:#2965A8;--1:#80BBFF">for</span><span style="--0:#2A2E3A;--1:#DADDE5"> x </span><span style="--0:#2965A8;--1:#80BBFF">in</span><span style="--0:#2A2E3A;--1:#DADDE5"> arr </span><span style="--0:#2965A8;--1:#80BBFF">if</span><span style="--0:#2A2E3A;--1:#DADDE5"> x </span><span style="--0:#7940CC;--1:#B38CFF">></span><span style="--0:#2A2E3A;--1:#DADDE5"> pivot</span><span style="--0:#2965A8;--1:#80BBFF">]</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#2965A8;--1:#80BBFF">return</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#9B4E2F;--1:#F29D79">quicksort</span><span style="--0:#2965A8;--1:#80BBFF">(</span><span style="--0:#9B4E2F;--1:#F29D79">left</span><span style="--0:#2965A8;--1:#80BBFF">)</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#7940CC;--1:#B38CFF">+</span><span style="--0:#2A2E3A;--1:#DADDE5"> middle </span><span style="--0:#7940CC;--1:#B38CFF">+</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#9B4E2F;--1:#F29D79">quicksort</span><span style="--0:#2965A8;--1:#80BBFF">(</span><span style="--0:#9B4E2F;--1:#F29D79">right</span><span style="--0:#2965A8;--1:#80BBFF">)</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#9B4E2F;--1:#F29D79">print</span><span style="--0:#2965A8;--1:#80BBFF">(</span><span style="--0:#9B4E2F;--1:#F29D79">quicksort</span><span style="--0:#2965A8;--1:#80BBFF">([</span><span style="--0:#AA3386;--1:#F48CCA">3</span><span style="--0:#2965A8;--1:#80BBFF">,</span><span style="--0:#9B4E2F;--1:#F29D79"> </span><span style="--0:#AA3386;--1:#F48CCA">6</span><span style="--0:#2965A8;--1:#80BBFF">,</span><span style="--0:#9B4E2F;--1:#F29D79"> </span><span style="--0:#AA3386;--1:#F48CCA">8</span><span style="--0:#2965A8;--1:#80BBFF">,</span><span style="--0:#9B4E2F;--1:#F29D79"> </span><span style="--0:#AA3386;--1:#F48CCA">10</span><span style="--0:#2965A8;--1:#80BBFF">,</span><span style="--0:#9B4E2F;--1:#F29D79"> </span><span style="--0:#AA3386;--1:#F48CCA">1</span><span style="--0:#2965A8;--1:#80BBFF">,</span><span style="--0:#9B4E2F;--1:#F29D79"> </span><span style="--0:#AA3386;--1:#F48CCA">2</span><span style="--0:#2965A8;--1:#80BBFF">,</span><span style="--0:#9B4E2F;--1:#F29D79"> </span><span style="--0:#AA3386;--1:#F48CCA">1</span><span style="--0:#2965A8;--1:#80BBFF">]))</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="# Python 示例def quicksort(arr):    if len(arr) <= 1:        return arr    pivot = arr[len(arr) // 2]    left = [x for x in arr if x < pivot]    middle = [x for x in arr if x == pivot]    right = [x for x in arr if x > pivot]    return quicksort(left) + middle + quicksort(right)print(quicksort([3, 6, 8, 10, 1, 2, 1]))"><div></div></button></div></figure></div>
+<h3 id="bashshell">Bash/Shell</h3>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#606369;--1:#8E9299">#!/bin/bash</span></div></div><div class="ec-line"><div class="code"><span style="--0:#606369;--1:#8E9299"># Shell 脚本示例</span></div></div><div class="ec-line"><div class="code"><span style="--0:#9B4E2F;--1:#F29D79">npm</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#25723F;--1:#82D99F">run</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#25723F;--1:#82D99F">dev</span></div></div><div class="ec-line"><div class="code"><span style="--0:#9B4E2F;--1:#F29D79">npm</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#25723F;--1:#82D99F">run</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#25723F;--1:#82D99F">build</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="#!/bin/bash# Shell 脚本示例npm run devnpm run build"><div></div></button></div></figure></div>
+<hr>
+<h2 id="-表格测试">📊 表格测试</h2>
+<h3 id="基础表格">基础表格</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>功能</th><th>状态</th><th>说明</th></tr></thead><tbody><tr><td>Wikilink</td><td>✅</td><td>完整支持</td></tr><tr><td>标签</td><td>✅</td><td>自动识别</td></tr><tr><td>图片</td><td>✅</td><td>语法支持</td></tr><tr><td>代码高亮</td><td>✅</td><td>多语言</td></tr></tbody></table>
+<h3 id="对齐表格">对齐表格</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">左对齐</th><th align="center">居中对齐</th><th align="right">右对齐</th></tr></thead><tbody><tr><td align="left">Left</td><td align="center">Center</td><td align="right">Right</td></tr><tr><td align="left">文本</td><td align="center">文本</td><td align="right">文本</td></tr></tbody></table>
+<h3 id="复杂表格">复杂表格</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>框架</th><th>版本</th><th>特点</th><th>链接</th></tr></thead><tbody><tr><td>Astro</td><td>5.x</td><td>高性能</td><td>[[features|查看详情]]</td></tr><tr><td>Vue</td><td>3.x</td><td>响应式</td><td><a class="article-tag" href=/AstrOb/tags/web><a class="article-tag" href=/AstrOb/tags/web>#Web</a></a>开发</td></tr><tr><td>Tailwind</td><td>3.x</td><td>实用性</td><td>#样式</td></tr></tbody></table>
+<hr>
+<h2 id="-任务列表测试">📋 任务列表测试</h2>
+<h3 id="项目任务">项目任务</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> 完成 Wikilink 解析</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> 支持标签系统</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> 添加代码高亮</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> 实现响应式设计</li>
+<li class="task-list-item"><input type="checkbox" disabled> 添加全文搜索</li>
+<li class="task-list-item"><input type="checkbox" disabled> 实现图谱可视化</li>
+<li class="task-list-item"><input type="checkbox" disabled> 支持评论功能</li>
+</ul>
+<h3 id="学习任务">学习任务</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> 学习 Astro 基础</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> 掌握 Obsidian 语法</li>
+<li class="task-list-item"><input type="checkbox" disabled> 深入 TypeScript</li>
+<li class="task-list-item"><input type="checkbox" disabled> 研究性能优化</li>
+</ul>
+<hr>
+<h2 id="-引用块测试">📖 引用块测试</h2>
+<h3 id="基础引用">基础引用</h3>
+<blockquote><p>这是一段引用文本。</p><p>可以包含多行内容。</p></blockquote>
+<h3 id="嵌套引用">嵌套引用</h3>
+<blockquote><p>第一层引用</p><blockquote><p>第二层引用</p><blockquote><p>第三层引用</p></blockquote></blockquote></blockquote>
+<h3 id="带作者的引用">带作者的引用</h3>
+<blockquote><p>“知识管理的本质是建立连接，而不是堆积信息。”</p><p>— Digital Garden Philosophy</p></blockquote>
+<hr>
+<h2 id="-链接测试">🔗 链接测试</h2>
+<h3 id="外部链接">外部链接</h3>
+<p>访问以下资源了解更多：</p>
+<ul>
+<li><a href="https://docs.astro.build/">Astro 官方文档</a></li>
+<li><a href="https://obsidian.md/">Obsidian 官网</a></li>
+<li><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
+<li><a href="https://github.com/">GitHub 仓库</a></li>
+</ul>
+<h3 id="混合链接">混合链接</h3>
+<p>结合 Wikilink 和外部链接：</p>
+<ul>
+<li>先看 <span class="article-wikilink">Welcome</span>，然后访问 <a href="https://docs.astro.build/">Astro 文档</a></li>
+<li>学习 <a class="article-wikilink" href=/AstrOb/getting-started>快速入门</a>，参考 <a href="https://help.obsidian.md/">官方指南</a></li>
+</ul>
+<hr>
+<h2 id="️-图片测试占位">🖼️ 图片测试（占位）</h2>
+<h3 id="图片语法">图片语法</h3>
+<p>使用 Obsidian 的图片语法：</p>
+<p>sample-image.png</p>
+<p><strong>注意：</strong> 需要将图片放在 <code>public/images/</code> 目录下。</p>
+<h3 id="markdown-图片">Markdown 图片</h3>
+<p>标准 Markdown 图片语法：</p>
+<p></p><figure alt="example.png" class="figure-image"><img src="/images/example.png" alt="example.png" class="mx-0"><figcaption>示例图片</figcaption></figure><p></p>
+<hr>
+<h2 id="-callout-提示框测试">💡 Callout 提示框测试</h2>
+<h3 id="note-提示">Note 提示</h3>
+<div class="callout" data-callout="note" data-collapsible="false"><div class="callout-title"><div class="callout-title-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="2" x2="22" y2="6"></line><path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path></svg></div><div class="callout-title-text">Note</div></div><div class="callout-content"><p>这是一个笔记类型的提示框，用于提供额外信息。</p></div></div>
+<h3 id="tip-提示">Tip 提示</h3>
+<div class="callout" data-callout="tip" data-collapsible="false"><div class="callout-title"><div class="callout-title-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div><div class="callout-title-text">Tip</div></div><div class="callout-content"><p>这是一个技巧提示框，分享有用的建议。</p></div></div>
+<h3 id="important-提示">Important 提示</h3>
+<div class="callout" data-callout="important" data-collapsible="false"><div class="callout-title"><div class="callout-title-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div><div class="callout-title-text">Important</div></div><div class="callout-content"><p>这是重要信息提示框，标记关键内容。</p></div></div>
+<h3 id="warning-提示">Warning 提示</h3>
+<div class="callout" data-callout="warning" data-collapsible="false"><div class="callout-title"><div class="callout-title-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div><div class="callout-title-text">Warning</div></div><div class="callout-content"><p>这是警告提示框，提醒注意事项。</p></div></div>
+<h3 id="caution-提示">Caution 提示</h3>
+<div class="callout" data-callout="caution" data-collapsible="false"><div class="callout-title"><div class="callout-title-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div><div class="callout-title-text">Caution</div></div><div class="callout-content"><p>这是谨慎提示框，标记需要特别注意的内容。</p></div></div>
+<hr>
+<h2 id="-其他-markdown-元素">📐 其他 Markdown 元素</h2>
+<h3 id="水平分割线">水平分割线</h3>
+<p>上面和下面都有分割线。</p>
+<hr>
+<h3 id="行内元素组合">行内元素组合</h3>
+<p>这段文本包含 <strong>粗体</strong>、<em>斜体</em>、<code>代码</code>、<a href="https://example.com">链接</a> 和 <span class="article-wikilink">Wikilink</span> 的组合。</p>
+<h3 id="特殊字符">特殊字符</h3>
+<ul>
+<li>HTML 实体：© ® ™</li>
+<li>表情符号：😀 🎉 ✨ 🚀 📚 💡</li>
+<li>箭头：← → ↑ ↓ ⇒ ⇔</li>
+</ul>
+<hr>
+<h2 id="-综合测试区域">🧪 综合测试区域</h2>
+<h3 id="场景1笔记关联">场景1：笔记关联</h3>
+<p>从这篇测试笔记，你可以：</p>
+<ol>
+<li>访问 <span class="article-wikilink">欢迎页</span> 了解项目</li>
+<li>查看 <a class="article-wikilink" href=/AstrOb/features>功能列表</a> 了解特性</li>
+<li>阅读 <a class="article-wikilink" href=/AstrOb/getting-started>入门指南</a> 开始使用</li>
+</ol>
+<h3 id="场景2标签导航">场景2：标签导航</h3>
+<p>浏览以下标签查看相关内容：</p>
+<ul>
+<li><a class="article-tag" href=/AstrOb/tags/obsidian><a class="article-tag" href=/AstrOb/tags/obsidian><a class="article-tag" href=/AstrOb/tags/obsidian>#Obsidian</a></a></a> - Obsidian 相关笔记</li>
+<li>#测试 - 测试相关内容</li>
+<li>#入门 - 入门指南</li>
+<li>#文档 - 文档类笔记</li>
+</ul>
+<h3 id="场景3代码示例">场景3：代码示例</h3>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre data-language="javascript"><code><div class="ec-line"><div class="code"><span style="--0:#606369;--1:#8E9299">// 实际代码示例</span></div></div><div class="ec-line"><div class="code"><span style="--0:#7940CC;--1:#B38CFF">const</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#70631F;--1:#DED47E">notes</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#7940CC;--1:#B38CFF">=</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#2965A8;--1:#80BBFF">await</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#9B4E2F;--1:#F29D79">getCollection</span><span style="--0:#2A2E3A;--1:#DADDE5">(</span><span style="--0:#2965A8;--1:#80BBFF">'</span><span style="--0:#25723F;--1:#82D99F">obsidian-notes</span><span style="--0:#2965A8;--1:#80BBFF">'</span><span style="--0:#2A2E3A;--1:#DADDE5">)</span><span style="--0:#2965A8;--1:#80BBFF">;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#7940CC;--1:#B38CFF">const</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#70631F;--1:#DED47E">published</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#7940CC;--1:#B38CFF">=</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#70631F;--1:#DED47E">notes</span><span style="--0:#2965A8;--1:#80BBFF">.</span><span style="--0:#9B4E2F;--1:#F29D79">filter</span><span style="--0:#2A2E3A;--1:#DADDE5">(</span><span style="--0:#70631F;--1:#DED47E">note</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#7940CC;--1:#B38CFF">=></span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#70631F;--1:#DED47E">note</span><span style="--0:#2965A8;--1:#80BBFF">.</span><span style="--0:#70631F;--1:#DED47E">data</span><span style="--0:#2965A8;--1:#80BBFF">.</span><span style="--0:#70631F;--1:#DED47E">publish</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#7940CC;--1:#B38CFF">===</span><span style="--0:#2A2E3A;--1:#DADDE5"> </span><span style="--0:#AA3386;--1:#F48CCA">true</span><span style="--0:#2A2E3A;--1:#DADDE5">)</span><span style="--0:#2965A8;--1:#80BBFF">;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#70631F;--1:#DED47E">console</span><span style="--0:#2965A8;--1:#80BBFF">.</span><span style="--0:#9B4E2F;--1:#F29D79">log</span><span style="--0:#2A2E3A;--1:#DADDE5">(</span><span style="--0:#2965A8;--1:#80BBFF">`</span><span style="--0:#25723F;--1:#82D99F">找到 </span><span style="--0:#2965A8;--1:#80BBFF">${</span><span style="--0:#70631F;--1:#DED47E">published</span><span style="--0:#2965A8;--1:#80BBFF">.</span><span style="--0:#25723F;--1:#82D99F">length</span><span style="--0:#2965A8;--1:#80BBFF">}</span><span style="--0:#25723F;--1:#82D99F"> 篇已发布的笔记</span><span style="--0:#2965A8;--1:#80BBFF">`</span><span style="--0:#2A2E3A;--1:#DADDE5">)</span><span style="--0:#2965A8;--1:#80BBFF">;</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="// 实际代码示例const notes = await getCollection(&#x27;obsidian-notes&#x27;);const published = notes.filter(note => note.data.publish === true);console.log(&#x60;找到 ${published.length} 篇已发布的笔记&#x60;);"><div></div></button></div></figure></div>
+<hr>
+<h2 id="-测试总结">📚 测试总结</h2>
+<h3 id="已测试的功能">已测试的功能</h3>
+<ul>
+<li>✅ Wikilink 基础链接</li>
+<li>✅ Wikilink 带显示文本</li>
+<li>✅ 标签系统（frontmatter）</li>
+<li>✅ 标签系统（正文）</li>
+<li>✅ Markdown 基础格式</li>
+<li>✅ 代码块高亮</li>
+<li>✅ 表格渲染</li>
+<li>✅ 任务列表</li>
+<li>✅ 引用块</li>
+<li>✅ 外部链接</li>
+<li>✅ Callout 提示框</li>
+</ul>
+<h3 id="待测试的功能">待测试的功能</h3>
+<ul>
+<li>⏳ 图片嵌入（需要图片文件）</li>
+<li>⏳ 复杂嵌套结构</li>
+<li>⏳ 大型文档性能</li>
+</ul>
+<hr>
+<h2 id="-使用建议">🎯 使用建议</h2>
+<h3 id="验证-wikilink">验证 Wikilink</h3>
+<ol>
+<li>点击上面的所有 <code><span class="article-wikilink">链接</span></code></li>
+<li>确认能跳转到对应笔记</li>
+<li>确认显示文本正确</li>
+</ol>
+<h3 id="验证标签">验证标签</h3>
+<ol>
+<li>点击上面的所有 <code>#标签</code></li>
+<li>确认跳转到标签页</li>
+<li>确认标签页显示正确的笔记列表</li>
+</ol>
+<h3 id="验证样式">验证样式</h3>
+<ol>
+<li>检查代码块是否有背景色</li>
+<li>检查表格是否有边框</li>
+<li>检查引用块是否有左边框</li>
+<li>检查任务列表是否有复选框样式</li>
+</ol>
+<hr>
+<h2 id="-相关笔记">🔗 相关笔记</h2>
+<ul>
+<li><span class="article-wikilink">Welcome</span> - 返回首页</li>
+<li><a class="article-wikilink" href=/AstrOb/getting-started>getting-started</a> - 快速开始</li>
+<li><a class="article-wikilink" href=/AstrOb/features>features</a> - 功能详解</li>
+</ul>
+<h2 id="️-相关标签">🏷️ 相关标签</h2>
+<p>使用以下标签查看更多内容：</p>
+<p>浏览相关标签：<a class="article-tag" href=/AstrOb/tags/obsidian><a class="article-tag" href=/AstrOb/tags/obsidian><a class="article-tag" href=/AstrOb/tags/obsidian>#Obsidian</a></a></a> #测试 #文档 #入门</p>
+<hr>
+<p><strong>测试完成！</strong> 如果所有功能都正常，说明你的 Obsidian 知识库系统已经完全就绪！🎉</p> </div> </section> </article>  <div class="sidebar sidebar-desktop"> <input type="checkbox" id="right-sidebar-desktop" class="sidebar-checkbox peer" checked> <label for="right-sidebar-desktop" class="sidebar-arrow sidebar-right-arrow"> <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="-6 0 24 24"><defs><path id="weuiArrowOutlined0" fill="currentColor" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z"></path></defs><use fill-rule="evenodd" href="#weuiArrowOutlined0" transform="rotate(-180 5.02 9.505)"></use></svg> </label> <div class="sidebar-content sidebar-content-right"> <section id="right-sidebar-desktop-tabset" class="tabset grid [grid-template-areas:'tab1_tab2_tab3''tabcontent_tabcontent_tabcontent'] grid-cols-3"> <div class="tabset-bg"></div> <input id="right-sidebar-desktop-tabset-tab-one" type="radio" name="right-sidebar-desktop-tabset" class="tabset-tab-checkbox peer/tab-one [grid-area:tab1]" checked>
+    <label for="right-sidebar-desktop-tabset-tab-one" class="tabset-tab tabset-tab-one [grid-area:tab1] " title="Outline"> <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 20 20" width="24" height="24"><path fill="currentColor" d="M14.4 9H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1h5.8c.552 0 .6-.447.6-1s-.048-1-.6-1m2 5H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1h7.8c.552 0 .6-.447.6-1s-.048-1-.6-1M8.6 6h7.8c.552 0 .6-.447.6-1s-.048-1-.6-1H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1M5.4 9H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1m0 5H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1m0-10H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1"></path></svg> </label> <input id="right-sidebar-desktop-tabset-tab-two" type="radio" name="right-sidebar-desktop-tabset" class="tabset-tab-checkbox peer/tab-two [grid-area:tab2]">
+    <label for="right-sidebar-desktop-tabset-tab-two" class="tabset-tab tabset-tab-two [grid-area:tab2]" title="Links"> <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg> </label> <input id="right-sidebar-desktop-tabset-tab-three" type="radio" name="right-sidebar-desktop-tabset" class="tabset-tab-checkbox peer/tab-three [grid-area:tab3]">
+    <label for="right-sidebar-desktop-tabset-tab-three" class="tabset-tab tabset-tab-three [grid-area:tab3]" title="Graph"> <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path fill="currentColor" d="M200 152a31.84 31.84 0 0 0-19.53 6.68l-23.11-18A31.65 31.65 0 0 0 160 128c0-.74 0-1.48-.08-2.21l13.23-4.41A32 32 0 1 0 168 104c0 .74 0 1.48.08 2.21l-13.23 4.41A32 32 0 0 0 128 96a32.6 32.6 0 0 0-5.27.44L115.89 81A32 32 0 1 0 96 88a32.6 32.6 0 0 0 5.27-.44l6.84 15.4a31.92 31.92 0 0 0-8.57 39.64l-25.71 22.84a32.06 32.06 0 1 0 10.63 12l25.71-22.84a31.91 31.91 0 0 0 37.36-1.24l23.11 18A31.65 31.65 0 0 0 168 184a32 32 0 1 0 32-32m0-64a16 16 0 1 1-16 16a16 16 0 0 1 16-16M80 56a16 16 0 1 1 16 16a16 16 0 0 1-16-16M56 208a16 16 0 1 1 16-16a16 16 0 0 1-16 16m144-8a16 16 0 1 1 16-16a16 16 0 0 1-16 16"></path></svg> </label> <div class="hidden peer-checked/tab-one:flex tabset-content [grid-area:tabcontent]"> <nav class="table-of-contents"><h2 class="table-of-contents-title">On this page</h2><ul class="table-of-contents-list"><li class="table-of-contents-link"><a data-depth="2" href="#-wikilink-双向链接测试"><span>🔗 Wikilink 双向链接测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#基础链接"><span>基础链接</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#带显示文本的链接"><span>带显示文本的链接</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#链接测试要点"><span>链接测试要点</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#️-标签系统测试"><span>🏷️ 标签系统测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#frontmatter-标签"><span>Frontmatter 标签</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#正文标签"><span>正文标签</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#标签测试要点"><span>标签测试要点</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-markdown-基础语法测试"><span>📝 Markdown 基础语法测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#文本格式"><span>文本格式</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#标题层级"><span>标题层级</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#有序列表"><span>有序列表</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#无序列表"><span>无序列表</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#混合列表"><span>混合列表</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-代码块测试"><span>💻 代码块测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#javascript"><span>JavaScript</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#typescript"><span>TypeScript</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#python"><span>Python</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#bashshell"><span>Bash/Shell</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-表格测试"><span>📊 表格测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#基础表格"><span>基础表格</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#对齐表格"><span>对齐表格</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#复杂表格"><span>复杂表格</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-任务列表测试"><span>📋 任务列表测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#项目任务"><span>项目任务</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#学习任务"><span>学习任务</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-引用块测试"><span>📖 引用块测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#基础引用"><span>基础引用</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#嵌套引用"><span>嵌套引用</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#带作者的引用"><span>带作者的引用</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-链接测试"><span>🔗 链接测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#外部链接"><span>外部链接</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#混合链接"><span>混合链接</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#️-图片测试占位"><span>🖼️ 图片测试（占位）</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#图片语法"><span>图片语法</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#markdown-图片"><span>Markdown 图片</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-callout-提示框测试"><span>💡 Callout 提示框测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#note-提示"><span>Note 提示</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#tip-提示"><span>Tip 提示</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#important-提示"><span>Important 提示</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#warning-提示"><span>Warning 提示</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#caution-提示"><span>Caution 提示</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-其他-markdown-元素"><span>📐 其他 Markdown 元素</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#水平分割线"><span>水平分割线</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#行内元素组合"><span>行内元素组合</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#特殊字符"><span>特殊字符</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-综合测试区域"><span>🧪 综合测试区域</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#场景1笔记关联"><span>场景1：笔记关联</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#场景2标签导航"><span>场景2：标签导航</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#场景3代码示例"><span>场景3：代码示例</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-测试总结"><span>📚 测试总结</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#已测试的功能"><span>已测试的功能</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#待测试的功能"><span>待测试的功能</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-使用建议"><span>🎯 使用建议</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#验证-wikilink"><span>验证 Wikilink</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#验证标签"><span>验证标签</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#验证样式"><span>验证样式</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-相关笔记"><span>🔗 相关笔记</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#️-相关标签"><span>🏷️ 相关标签</span></a></li></ul></nav> </div> <div class="hidden peer-checked/tab-two:flex tabset-content [grid-area:tabcontent]"> <div class="links-section"> <nav class="links"><h2 class="links-title">Links</h2><ul class="links-list"><li class="link"><a href="/AstrOb/getting-started" title="getting-started"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg><span>getting-started</span></a></li><li class="link"><a href="/AstrOb/features" title="features"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg><span>features</span></a></li><li class="link"><a href="/AstrOb/tags/obsidian" title="Obsidian"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg><span>Obsidian</span></a></li><li class="link"><a href="/AstrOb/tags/markdown" title="Markdown"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg><span>Markdown</span></a></li><li class="link"><a href="/AstrOb/tags/web" title="Web"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg><span>Web</span></a></li><li class="link"><a href="/AstrOb/tags/typescript" title="TypeScript"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg><span>TypeScript</span></a></li><li class="link"><a href="/AstrOb/tags/javascript" title="JavaScript"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg><span>JavaScript</span></a></li></ul></nav> <nav class="links"><h2 class="links-title">Linked Mentions</h2><ul class="links-list"><li class="link"><a href="/AstrOb/welcome-copy" title="Welcome"><svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">  <path fill="currentColor" d="M15.728 3.884c1.434-1.44 3.532-1.47 4.694-.304c1.164 1.168 1.132 3.28-.303 4.72l-2.424 2.433a.75.75 0 0 0 1.063 1.059l2.424-2.433c1.91-1.919 2.15-4.982.303-6.838c-1.85-1.857-4.907-1.615-6.82.304L9.818 7.692c-1.912 1.919-2.152 4.982-.303 6.837a.75.75 0 1 0 1.062-1.058c-1.163-1.168-1.132-3.28.303-4.72z"></path> <path fill="currentColor" d="M14.485 9.47a.75.75 0 0 0-1.063 1.06c1.164 1.168 1.132 3.279-.303 4.72L8.27 20.116c-1.434 1.44-3.532 1.47-4.694.304c-1.163-1.168-1.132-3.28.303-4.72l2.424-2.433a.75.75 0 1 0-1.062-1.059l-2.424 2.433C.906 16.56.666 19.623 2.515 21.48c1.85 1.858 4.907 1.615 6.819-.304l4.848-4.867c1.91-1.918 2.15-4.982.303-6.837" opacity="0.5"></path>  </svg><span>Welcome</span></a></li><li class="link"><a href="/AstrOb/advanced-features" title="高级功能指南"><svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">  <path fill="currentColor" d="M15.728 3.884c1.434-1.44 3.532-1.47 4.694-.304c1.164 1.168 1.132 3.28-.303 4.72l-2.424 2.433a.75.75 0 0 0 1.063 1.059l2.424-2.433c1.91-1.919 2.15-4.982.303-6.838c-1.85-1.857-4.907-1.615-6.82.304L9.818 7.692c-1.912 1.919-2.152 4.982-.303 6.837a.75.75 0 1 0 1.062-1.058c-1.163-1.168-1.132-3.28.303-4.72z"></path> <path fill="currentColor" d="M14.485 9.47a.75.75 0 0 0-1.063 1.06c1.164 1.168 1.132 3.279-.303 4.72L8.27 20.116c-1.434 1.44-3.532 1.47-4.694.304c-1.163-1.168-1.132-3.28.303-4.72l2.424-2.433a.75.75 0 1 0-1.062-1.059l-2.424 2.433C.906 16.56.666 19.623 2.515 21.48c1.85 1.858 4.907 1.615 6.819-.304l4.848-4.867c1.91-1.918 2.15-4.982.303-6.837" opacity="0.5"></path>  </svg><span>高级功能指南</span></a></li><li class="link"><a href="/AstrOb/features" title="Features"><svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">  <path fill="currentColor" d="M15.728 3.884c1.434-1.44 3.532-1.47 4.694-.304c1.164 1.168 1.132 3.28-.303 4.72l-2.424 2.433a.75.75 0 0 0 1.063 1.059l2.424-2.433c1.91-1.919 2.15-4.982.303-6.838c-1.85-1.857-4.907-1.615-6.82.304L9.818 7.692c-1.912 1.919-2.152 4.982-.303 6.837a.75.75 0 1 0 1.062-1.058c-1.163-1.168-1.132-3.28.303-4.72z"></path> <path fill="currentColor" d="M14.485 9.47a.75.75 0 0 0-1.063 1.06c1.164 1.168 1.132 3.279-.303 4.72L8.27 20.116c-1.434 1.44-3.532 1.47-4.694.304c-1.163-1.168-1.132-3.28.303-4.72l2.424-2.433a.75.75 0 1 0-1.062-1.059l-2.424 2.433C.906 16.56.666 19.623 2.515 21.48c1.85 1.858 4.907 1.615 6.819-.304l4.848-4.867c1.91-1.918 2.15-4.982.303-6.837" opacity="0.5"></path>  </svg><span>Features</span></a></li><li class="link"><a href="/AstrOb/getting-started" title="Getting Started"><svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">  <path fill="currentColor" d="M15.728 3.884c1.434-1.44 3.532-1.47 4.694-.304c1.164 1.168 1.132 3.28-.303 4.72l-2.424 2.433a.75.75 0 0 0 1.063 1.059l2.424-2.433c1.91-1.919 2.15-4.982.303-6.838c-1.85-1.857-4.907-1.615-6.82.304L9.818 7.692c-1.912 1.919-2.152 4.982-.303 6.837a.75.75 0 1 0 1.062-1.058c-1.163-1.168-1.132-3.28.303-4.72z"></path> <path fill="currentColor" d="M14.485 9.47a.75.75 0 0 0-1.063 1.06c1.164 1.168 1.132 3.279-.303 4.72L8.27 20.116c-1.434 1.44-3.532 1.47-4.694.304c-1.163-1.168-1.132-3.28.303-4.72l2.424-2.433a.75.75 0 1 0-1.062-1.059l-2.424 2.433C.906 16.56.666 19.623 2.515 21.48c1.85 1.858 4.907 1.615 6.819-.304l4.848-4.867c1.91-1.918 2.15-4.982.303-6.837" opacity="0.5"></path>  </svg><span>Getting Started</span></a></li></ul></nav> </div> </div> <div class="hidden peer-checked/tab-three:flex tabset-content [grid-area:tabcontent]"> <graph-view base="/AstrOb/" slug="obsidian-test" class="graph"></graph-view> <script type="module" src="/AstrOb/_astro/GraphView.astro_astro_type_script_index_0_lang.7LrXYq6_.js"></script> </div> </section> </div> </div><div class="sidebar sidebar-touch"> <input type="checkbox" id="right-sidebar-touch" class="sidebar-checkbox peer"> <label for="right-sidebar-touch" class="sidebar-arrow sidebar-right-arrow"> <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="-6 0 24 24"><defs><path id="weuiArrowOutlined0" fill="currentColor" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z"></path></defs><use fill-rule="evenodd" href="#weuiArrowOutlined0" transform="rotate(-180 5.02 9.505)"></use></svg> </label> <div class="sidebar-content sidebar-content-right"> <section id="right-sidebar-touch-tabset" class="tabset grid [grid-template-areas:'tab1_tab2_tab3''tabcontent_tabcontent_tabcontent'] grid-cols-3"> <div class="tabset-bg"></div> <input id="right-sidebar-touch-tabset-tab-one" type="radio" name="right-sidebar-touch-tabset" class="tabset-tab-checkbox peer/tab-one [grid-area:tab1]" checked>
+    <label for="right-sidebar-touch-tabset-tab-one" class="tabset-tab tabset-tab-one [grid-area:tab1] " title="Outline"> <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 20 20" width="24" height="24"><path fill="currentColor" d="M14.4 9H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1h5.8c.552 0 .6-.447.6-1s-.048-1-.6-1m2 5H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1h7.8c.552 0 .6-.447.6-1s-.048-1-.6-1M8.6 6h7.8c.552 0 .6-.447.6-1s-.048-1-.6-1H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1M5.4 9H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1m0 5H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1m0-10H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1"></path></svg> </label> <input id="right-sidebar-touch-tabset-tab-two" type="radio" name="right-sidebar-touch-tabset" class="tabset-tab-checkbox peer/tab-two [grid-area:tab2]">
+    <label for="right-sidebar-touch-tabset-tab-two" class="tabset-tab tabset-tab-two [grid-area:tab2]" title="Links"> <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg> </label> <input id="right-sidebar-touch-tabset-tab-three" type="radio" name="right-sidebar-touch-tabset" class="tabset-tab-checkbox peer/tab-three [grid-area:tab3]">
+    <label for="right-sidebar-touch-tabset-tab-three" class="tabset-tab tabset-tab-three [grid-area:tab3]" title="Graph"> <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path fill="currentColor" d="M200 152a31.84 31.84 0 0 0-19.53 6.68l-23.11-18A31.65 31.65 0 0 0 160 128c0-.74 0-1.48-.08-2.21l13.23-4.41A32 32 0 1 0 168 104c0 .74 0 1.48.08 2.21l-13.23 4.41A32 32 0 0 0 128 96a32.6 32.6 0 0 0-5.27.44L115.89 81A32 32 0 1 0 96 88a32.6 32.6 0 0 0 5.27-.44l6.84 15.4a31.92 31.92 0 0 0-8.57 39.64l-25.71 22.84a32.06 32.06 0 1 0 10.63 12l25.71-22.84a31.91 31.91 0 0 0 37.36-1.24l23.11 18A31.65 31.65 0 0 0 168 184a32 32 0 1 0 32-32m0-64a16 16 0 1 1-16 16a16 16 0 0 1 16-16M80 56a16 16 0 1 1 16 16a16 16 0 0 1-16-16M56 208a16 16 0 1 1 16-16a16 16 0 0 1-16 16m144-8a16 16 0 1 1 16-16a16 16 0 0 1-16 16"></path></svg> </label> <div class="hidden peer-checked/tab-one:flex tabset-content [grid-area:tabcontent]"> <nav class="table-of-contents"><h2 class="table-of-contents-title">On this page</h2><ul class="table-of-contents-list"><li class="table-of-contents-link"><a data-depth="2" href="#-wikilink-双向链接测试"><span>🔗 Wikilink 双向链接测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#基础链接"><span>基础链接</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#带显示文本的链接"><span>带显示文本的链接</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#链接测试要点"><span>链接测试要点</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#️-标签系统测试"><span>🏷️ 标签系统测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#frontmatter-标签"><span>Frontmatter 标签</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#正文标签"><span>正文标签</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#标签测试要点"><span>标签测试要点</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-markdown-基础语法测试"><span>📝 Markdown 基础语法测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#文本格式"><span>文本格式</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#标题层级"><span>标题层级</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#有序列表"><span>有序列表</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#无序列表"><span>无序列表</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#混合列表"><span>混合列表</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-代码块测试"><span>💻 代码块测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#javascript"><span>JavaScript</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#typescript"><span>TypeScript</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#python"><span>Python</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#bashshell"><span>Bash/Shell</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-表格测试"><span>📊 表格测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#基础表格"><span>基础表格</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#对齐表格"><span>对齐表格</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#复杂表格"><span>复杂表格</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-任务列表测试"><span>📋 任务列表测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#项目任务"><span>项目任务</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#学习任务"><span>学习任务</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-引用块测试"><span>📖 引用块测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#基础引用"><span>基础引用</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#嵌套引用"><span>嵌套引用</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#带作者的引用"><span>带作者的引用</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-链接测试"><span>🔗 链接测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#外部链接"><span>外部链接</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#混合链接"><span>混合链接</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#️-图片测试占位"><span>🖼️ 图片测试（占位）</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#图片语法"><span>图片语法</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#markdown-图片"><span>Markdown 图片</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-callout-提示框测试"><span>💡 Callout 提示框测试</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#note-提示"><span>Note 提示</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#tip-提示"><span>Tip 提示</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#important-提示"><span>Important 提示</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#warning-提示"><span>Warning 提示</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#caution-提示"><span>Caution 提示</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-其他-markdown-元素"><span>📐 其他 Markdown 元素</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#水平分割线"><span>水平分割线</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#行内元素组合"><span>行内元素组合</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#特殊字符"><span>特殊字符</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-综合测试区域"><span>🧪 综合测试区域</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#场景1笔记关联"><span>场景1：笔记关联</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#场景2标签导航"><span>场景2：标签导航</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#场景3代码示例"><span>场景3：代码示例</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-测试总结"><span>📚 测试总结</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#已测试的功能"><span>已测试的功能</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#待测试的功能"><span>待测试的功能</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-使用建议"><span>🎯 使用建议</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#验证-wikilink"><span>验证 Wikilink</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#验证标签"><span>验证标签</span></a></li><li class="table-of-contents-link"><a data-depth="3" href="#验证样式"><span>验证样式</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#-相关笔记"><span>🔗 相关笔记</span></a></li><li class="table-of-contents-link"><a data-depth="2" href="#️-相关标签"><span>🏷️ 相关标签</span></a></li></ul></nav> </div> <div class="hidden peer-checked/tab-two:flex tabset-content [grid-area:tabcontent]"> <div class="links-section"> <nav class="links"><h2 class="links-title">Links</h2><ul class="links-list"><li class="link"><a href="/AstrOb/getting-started" title="getting-started"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg><span>getting-started</span></a></li><li class="link"><a href="/AstrOb/features" title="features"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg><span>features</span></a></li><li class="link"><a href="/AstrOb/tags/obsidian" title="Obsidian"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg><span>Obsidian</span></a></li><li class="link"><a href="/AstrOb/tags/markdown" title="Markdown"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg><span>Markdown</span></a></li><li class="link"><a href="/AstrOb/tags/web" title="Web"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg><span>Web</span></a></li><li class="link"><a href="/AstrOb/tags/typescript" title="TypeScript"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg><span>TypeScript</span></a></li><li class="link"><a href="/AstrOb/tags/javascript" title="JavaScript"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"></path><path d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433" opacity="0.5"></path></g></svg><span>JavaScript</span></a></li></ul></nav> <nav class="links"><h2 class="links-title">Linked Mentions</h2><ul class="links-list"><li class="link"><a href="/AstrOb/welcome-copy" title="Welcome"><svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">  <path fill="currentColor" d="M15.728 3.884c1.434-1.44 3.532-1.47 4.694-.304c1.164 1.168 1.132 3.28-.303 4.72l-2.424 2.433a.75.75 0 0 0 1.063 1.059l2.424-2.433c1.91-1.919 2.15-4.982.303-6.838c-1.85-1.857-4.907-1.615-6.82.304L9.818 7.692c-1.912 1.919-2.152 4.982-.303 6.837a.75.75 0 1 0 1.062-1.058c-1.163-1.168-1.132-3.28.303-4.72z"></path> <path fill="currentColor" d="M14.485 9.47a.75.75 0 0 0-1.063 1.06c1.164 1.168 1.132 3.279-.303 4.72L8.27 20.116c-1.434 1.44-3.532 1.47-4.694.304c-1.163-1.168-1.132-3.28.303-4.72l2.424-2.433a.75.75 0 1 0-1.062-1.059l-2.424 2.433C.906 16.56.666 19.623 2.515 21.48c1.85 1.858 4.907 1.615 6.819-.304l4.848-4.867c1.91-1.918 2.15-4.982.303-6.837" opacity="0.5"></path>  </svg><span>Welcome</span></a></li><li class="link"><a href="/AstrOb/advanced-features" title="高级功能指南"><svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">  <path fill="currentColor" d="M15.728 3.884c1.434-1.44 3.532-1.47 4.694-.304c1.164 1.168 1.132 3.28-.303 4.72l-2.424 2.433a.75.75 0 0 0 1.063 1.059l2.424-2.433c1.91-1.919 2.15-4.982.303-6.838c-1.85-1.857-4.907-1.615-6.82.304L9.818 7.692c-1.912 1.919-2.152 4.982-.303 6.837a.75.75 0 1 0 1.062-1.058c-1.163-1.168-1.132-3.28.303-4.72z"></path> <path fill="currentColor" d="M14.485 9.47a.75.75 0 0 0-1.063 1.06c1.164 1.168 1.132 3.279-.303 4.72L8.27 20.116c-1.434 1.44-3.532 1.47-4.694.304c-1.163-1.168-1.132-3.28.303-4.72l2.424-2.433a.75.75 0 1 0-1.062-1.059l-2.424 2.433C.906 16.56.666 19.623 2.515 21.48c1.85 1.858 4.907 1.615 6.819-.304l4.848-4.867c1.91-1.918 2.15-4.982.303-6.837" opacity="0.5"></path>  </svg><span>高级功能指南</span></a></li><li class="link"><a href="/AstrOb/features" title="Features"><svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">  <path fill="currentColor" d="M15.728 3.884c1.434-1.44 3.532-1.47 4.694-.304c1.164 1.168 1.132 3.28-.303 4.72l-2.424 2.433a.75.75 0 0 0 1.063 1.059l2.424-2.433c1.91-1.919 2.15-4.982.303-6.838c-1.85-1.857-4.907-1.615-6.82.304L9.818 7.692c-1.912 1.919-2.152 4.982-.303 6.837a.75.75 0 1 0 1.062-1.058c-1.163-1.168-1.132-3.28.303-4.72z"></path> <path fill="currentColor" d="M14.485 9.47a.75.75 0 0 0-1.063 1.06c1.164 1.168 1.132 3.279-.303 4.72L8.27 20.116c-1.434 1.44-3.532 1.47-4.694.304c-1.163-1.168-1.132-3.28.303-4.72l2.424-2.433a.75.75 0 1 0-1.062-1.059l-2.424 2.433C.906 16.56.666 19.623 2.515 21.48c1.85 1.858 4.907 1.615 6.819-.304l4.848-4.867c1.91-1.918 2.15-4.982.303-6.837" opacity="0.5"></path>  </svg><span>Features</span></a></li><li class="link"><a href="/AstrOb/getting-started" title="Getting Started"><svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">  <path fill="currentColor" d="M15.728 3.884c1.434-1.44 3.532-1.47 4.694-.304c1.164 1.168 1.132 3.28-.303 4.72l-2.424 2.433a.75.75 0 0 0 1.063 1.059l2.424-2.433c1.91-1.919 2.15-4.982.303-6.838c-1.85-1.857-4.907-1.615-6.82.304L9.818 7.692c-1.912 1.919-2.152 4.982-.303 6.837a.75.75 0 1 0 1.062-1.058c-1.163-1.168-1.132-3.28.303-4.72z"></path> <path fill="currentColor" d="M14.485 9.47a.75.75 0 0 0-1.063 1.06c1.164 1.168 1.132 3.279-.303 4.72L8.27 20.116c-1.434 1.44-3.532 1.47-4.694.304c-1.163-1.168-1.132-3.28.303-4.72l2.424-2.433a.75.75 0 1 0-1.062-1.059l-2.424 2.433C.906 16.56.666 19.623 2.515 21.48c1.85 1.858 4.907 1.615 6.819-.304l4.848-4.867c1.91-1.918 2.15-4.982.303-6.837" opacity="0.5"></path>  </svg><span>Getting Started</span></a></li></ul></nav> </div> </div> <div class="hidden peer-checked/tab-three:flex tabset-content [grid-area:tabcontent]"> <graph-view base="/AstrOb/" slug="obsidian-test" class="graph"></graph-view>  </div> </section> </div> </div>  </main> <footer class="footer"><p>Reading Time: 8 minutes</p></footer> <script type="module" src="/AstrOb/_astro/Layout.astro_astro_type_script_index_0_lang.CsMgWStN.js"></script> <script type="module" src="/AstrOb/_astro/Layout.astro_astro_type_script_index_1_lang.C_JcYfU3.js"></script> <script type="module" src="/AstrOb/_astro/PanZoom.astro_astro_type_script_index_0_lang.DulDnOOc.js"></script> </body></html> <button id="theme-toggle" type="button" class="theme-toggle" aria-label="切换主题" data-astro-cid-x3pjskd3> <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" data-astro-cid-x3pjskd3> <circle cx="10" cy="10" r="3.5" stroke-width="1.5" data-astro-cid-x3pjskd3></circle> <path d="M10 2v2m0 12v2M18 10h-2M4 10H2m14.364-5.364l-1.414 1.414M7.05 12.95l-1.414 1.414m9.9 0l-1.414-1.414M7.05 7.05L5.636 5.636" stroke-width="1.5" stroke-linecap="round" data-astro-cid-x3pjskd3></path> </svg> <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" data-astro-cid-x3pjskd3> <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor" data-astro-cid-x3pjskd3></path> </svg> </button>  <script type="module">const r=()=>{if(typeof localStorage<"u"){const e=localStorage.getItem("colorMode");if(e==="light"||e==="dark")return e}return window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"},o=e=>{const t=document.documentElement;e==="dark"?(t.classList.add("dark"),t.classList.remove("light")):(t.classList.remove("dark"),t.classList.add("light")),localStorage.getItem("selectedTheme")==="framer"&&(e==="dark"?t.setAttribute("data-theme","dark"):t.removeAttribute("data-theme")),typeof localStorage<"u"&&localStorage.setItem("colorMode",e)};o(r());document.getElementById("theme-toggle")?.addEventListener("click",()=>{const t=r()==="light"?"dark":"light";o(t)});window.matchMedia("(prefers-color-scheme: light)").addEventListener("change",e=>{typeof localStorage<"u"&&!localStorage.getItem("colorMode")&&o(e.matches?"light":"dark")});</script> <div class="theme-selector" data-theme-urls="{&#34;framer&#34;:&#34;/AstrOb/_astro/theme.framer.B8rTjiZe.css&#34;,&#34;galaxy&#34;:&#34;/AstrOb/_astro/theme.galaxy.C1IQjjuB.css&#34;,&#34;journey&#34;:&#34;/AstrOb/_astro/theme.journey.Dj9mt6tb.css&#34;,&#34;temple&#34;:&#34;/AstrOb/_astro/theme.temple.Ha5BbV1L.css&#34;}" data-astro-cid-lgn464si> <button class="theme-selector-btn" id="theme-selector-btn" aria-label="选择主题" data-astro-cid-lgn464si> <span class="theme-icon" data-astro-cid-lgn464si>🎨</span> <span class="theme-label" id="current-theme-label" data-astro-cid-lgn464si>主题</span> <span class="theme-arrow" data-astro-cid-lgn464si>▼</span> </button> <div class="theme-dropdown" id="theme-dropdown" data-astro-cid-lgn464si> <button class="theme-option" data-theme="default" data-astro-cid-lgn464si> <span class="option-icon" data-astro-cid-lgn464si>🎨</span> <span class="option-text" data-astro-cid-lgn464si>Default 主题</span> </button> <button class="theme-option" data-theme="framer" data-astro-cid-lgn464si> <span class="option-icon" data-astro-cid-lgn464si>🖼️</span> <span class="option-text" data-astro-cid-lgn464si>Framer 主题</span> </button> <button class="theme-option" data-theme="galaxy" data-astro-cid-lgn464si> <span class="option-icon" data-astro-cid-lgn464si>🌠</span> <span class="option-text" data-astro-cid-lgn464si>Galaxy 主题</span> </button> <button class="theme-option" data-theme="journey" data-astro-cid-lgn464si> <span class="option-icon" data-astro-cid-lgn464si>✈️</span> <span class="option-text" data-astro-cid-lgn464si>Journey 主题</span> </button> <button class="theme-option" data-theme="temple" data-astro-cid-lgn464si> <span class="option-icon" data-astro-cid-lgn464si>🏛️</span> <span class="option-text" data-astro-cid-lgn464si>Temple 主题</span> </button> </div> </div>  <script>
+  (function() {
+    const btn = document.getElementById('theme-selector-btn');
+    const dropdown = document.getElementById('theme-dropdown');
+    const label = document.getElementById('current-theme-label');
+    const options = document.querySelectorAll('.theme-option');
+    const themeSelector = document.querySelector('.theme-selector');
+    
+    // 获取主题 CSS URLs（由 Astro 在构建时注入）
+    const themeCssUrls = JSON.parse(themeSelector.getAttribute('data-theme-urls') || '{}');
+
+    // 动态加载主题 CSS 文件
+    let currentThemeLink = null;
+    
+    function loadThemeCSS(themeName) {
+      // 移除之前加载的主题文件
+      if (currentThemeLink) {
+        currentThemeLink.remove();
+        currentThemeLink = null;
+      }
+      
+      // 如果主题有对应的 CSS 文件，则加载
+      const cssUrl = themeCssUrls[themeName];
+      if (cssUrl) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = cssUrl;
+        link.id = 'dynamic-theme-css';
+        document.head.appendChild(link);
+        currentThemeLink = link;
+      }
+    }
+
+    // 获取当前明暗模式状态
+    function getCurrentColorMode() {
+      // 优先从 localStorage 读取用户偏好
+      const saved = localStorage.getItem('colorMode');
+      if (saved === 'dark' || saved === 'light') {
+        return saved;
+      }
+      // 其次检查当前 DOM 状态
+      if (document.documentElement.classList.contains('dark')) {
+        return 'dark';
+      }
+      // 最后使用系统偏好
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+      return 'light';
+    }
+
+    // 应用明暗模式（由 ThemeToggle 和主题切换共用）
+    function applyColorMode(mode) {
+      if (mode === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+      }
+      localStorage.setItem('colorMode', mode);
+    }
+
+    // 主题配置（只保留主题风格，不包含明暗变体）
+    const themes = {
+      'default': {
+        name: 'Default 主题',
+        icon: '🎨',
+        apply: function() {
+          loadThemeCSS('default');
+          // 保持当前明暗模式
+          const currentMode = getCurrentColorMode();
+          applyColorMode(currentMode);
+          document.body.classList.remove('framer-theme', 'framer-typography');
+        }
+      },
+      'framer': {
+        name: 'Framer 主题',
+        icon: '🖼️',
+        apply: function() {
+          loadThemeCSS('framer');
+          // 保持当前明暗模式
+          const currentMode = getCurrentColorMode();
+          applyColorMode(currentMode);
+          document.body.classList.add('framer-theme', 'framer-typography');
+        }
+      },
+      'galaxy': {
+        name: 'Galaxy 主题',
+        icon: '🌠',
+        apply: function() {
+          loadThemeCSS('galaxy');
+          // 保持当前明暗模式
+          const currentMode = getCurrentColorMode();
+          applyColorMode(currentMode);
+          document.body.classList.remove('framer-theme', 'framer-typography');
+        }
+      },
+      'journey': {
+        name: 'Journey 主题',
+        icon: '✈️',
+        apply: function() {
+          loadThemeCSS('journey');
+          // 保持当前明暗模式
+          const currentMode = getCurrentColorMode();
+          applyColorMode(currentMode);
+          document.body.classList.remove('framer-theme', 'framer-typography');
+        }
+      },
+      'temple': {
+        name: 'Temple 主题',
+        icon: '🏛️',
+        apply: function() {
+          loadThemeCSS('temple');
+          // 保持当前明暗模式
+          const currentMode = getCurrentColorMode();
+          applyColorMode(currentMode);
+          document.body.classList.remove('framer-theme', 'framer-typography');
+        }
+      }
+    };
+
+    // 加载保存的主题
+    function loadTheme() {
+      const saved = localStorage.getItem('selectedTheme') || 'default';
+      applyTheme(saved);
+    }
+
+    // 应用主题
+    function applyTheme(themeId) {
+      const theme = themes[themeId];
+      if (!theme) return;
+
+      // 应用主题
+      theme.apply();
+
+      // 更新按钮文字
+      label.textContent = theme.name;
+
+      // 更新选项状态
+      options.forEach(function(opt) {
+        if (opt.getAttribute('data-theme') === themeId) {
+          opt.classList.add('active');
+        } else {
+          opt.classList.remove('active');
+        }
+      });
+
+      // 保存选择
+      localStorage.setItem('selectedTheme', themeId);
+    }
+
+    // 切换下拉菜单
+    btn?.addEventListener('click', function() {
+      const isOpen = dropdown.classList.contains('show');
+      if (isOpen) {
+        dropdown.classList.remove('show');
+        btn.classList.remove('open');
+      } else {
+        dropdown.classList.add('show');
+        btn.classList.add('open');
+      }
+    });
+
+    // 点击选项
+    options.forEach(function(option) {
+      option.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const themeId = this.getAttribute('data-theme');
+        applyTheme(themeId);
+        dropdown.classList.remove('show');
+        btn.classList.remove('open');
+      });
+    });
+
+    // 点击外部关闭
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.theme-selector')) {
+        dropdown.classList.remove('show');
+        btn?.classList.remove('open');
+      }
+    });
+
+    // 初始化
+    loadTheme();
+  })();
+</script>
